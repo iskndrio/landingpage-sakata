@@ -21,19 +21,17 @@ export default function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.28, 0.45], [1, 1, 0.15]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.22, 0.35], [1, 1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.45], [1, 0.94]);
   const heroY = useTransform(scrollYProgress, [0, 0.45], [0, -60]);
 
   const coverY = useTransform(scrollYProgress, [0, 0.2, 0.55], [160, 80, -180]);
   const coverScale = useTransform(scrollYProgress, [0.1, 0.55], [0.98, 1]);
-  const coverOpacity = useTransform(scrollYProgress, [0, 0.18, 0.35], [0.95, 1, 1]);
-
   return (
-    <section ref={sectionRef} className="section-container relative min-h-[180vh] py-16 md:py-24">
+    <section ref={sectionRef} className="section-container relative min-h-[100vh] bg-white pt-6 pb-0 md:pt-10 md:pb-0">
       <motion.div
         style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
-        className="sticky top-28 z-0 flex justify-center"
+        className="sticky top-16 z-0 flex justify-center bg-white"
       >
         <div className="text-center">
           <motion.span
@@ -90,10 +88,10 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      <div className="mt-16 md:mt-24">
-        <div className="sticky top-24">
+      <div className="mt-4 md:mt-6 bg-white">
+        <div className="sticky top-24 bg-white">
           <motion.div
-            style={{ y: coverY, scale: coverScale, opacity: coverOpacity }}
+            style={{ y: coverY, scale: coverScale, opacity: 1 }}
             className="relative z-30 mx-auto h-[56vh] w-full max-w-7xl overflow-hidden rounded-[2rem] border border-gray-200 bg-[#F4F6FA] shadow-[0_30px_80px_rgba(17,24,39,0.10)]"
           >
             <Image
@@ -105,7 +103,7 @@ export default function HeroSection() {
               sizes="(max-width: 768px) 100vw, 1200px"
             />
             <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-2 md:bottom-8 md:left-8 md:right-8">
-              <div className="inline-flex w-fit rounded-full bg-white/15 px-4 py-1 text-xs font-semibold tracking-[0.2em] text-white backdrop-blur">
+              <div className="inline-flex w-fit rounded-full bg-[#111827] px-4 py-1 text-xs font-semibold tracking-[0.2em] text-white">
                 EKOSISTEM
               </div>
               <p className="max-w-2xl font-display text-2xl font-bold leading-tight text-white md:text-3xl">

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CommunitySection() {
   return (
-    <section id="komunitas" className="section-container py-16 md:py-24">
+    <section id="komunitas" className="section-container relative z-20 bg-white pt-4 pb-16 md:pt-6 md:pb-24">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

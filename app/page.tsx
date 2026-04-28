@@ -15,8 +15,10 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <HeroSection />
-        <CommunitySection />
+        <div className="relative z-10 bg-white">
+          <HeroSection />
+          <CommunitySection />
+        </div>
         <StatsSection />
         <ProgramSection />
         <AboutSection />
