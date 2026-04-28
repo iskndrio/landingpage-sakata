@@ -51,7 +51,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="mx-auto mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-[#1A1F36] md:text-7xl"
           >
-            Mendorong Inovasi Teknologi untuk Indonesia yang
+            Mendorong Inovasi Teknologi untuk Indonesia yang{" "}
             <span className="text-[#2563EB]">Lebih Baik.</span>
           </motion.h1>
           <motion.p
