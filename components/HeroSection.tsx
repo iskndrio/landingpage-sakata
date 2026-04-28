@@ -33,9 +33,9 @@ export default function HeroSection() {
     <section ref={sectionRef} className="section-container relative min-h-[180vh] py-16 md:py-24">
       <motion.div
         style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
-        className="sticky top-28 z-0 grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+        className="sticky top-28 z-0 flex justify-center"
       >
-        <div>
+        <div className="text-center">
           <motion.span
             initial="hidden"
             animate="visible"
@@ -51,12 +51,9 @@ export default function HeroSection() {
             animate="visible"
             custom={0.1}
             variants={itemVariants}
-            className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-[#1A1F36] md:text-7xl"
+            className="mx-auto mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-[#1A1F36] md:text-7xl"
           >
-            Mendorong Inovasi Teknologi
-            <br />
-            untuk Indonesia yang
-            <br />
+            Mendorong Inovasi Teknologi untuk Indonesia yang
             <span className="text-[#2563EB]">Lebih Baik.</span>
           </motion.h1>
           <motion.p
@@ -64,7 +61,7 @@ export default function HeroSection() {
             animate="visible"
             custom={0.2}
             variants={itemVariants}
-            className="mt-6 max-w-2xl text-base leading-8 text-[#6B7280] md:text-lg"
+            className="mt-6 mx-auto max-w-2xl text-base leading-8 text-[#6B7280] md:text-lg"
           >
             Sakata Innovation Center hadir untuk membangun ekosistem teknologi yang inklusif, berdampak, dan
             berkelanjutan bagi seluruh Indonesia.
@@ -75,7 +72,7 @@ export default function HeroSection() {
             animate="visible"
             custom={0.3}
             variants={itemVariants}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap justify-center gap-4"
           >
             <a
               href="#program"
@@ -107,7 +104,6 @@ export default function HeroSection() {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 1200px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1F36]/55 via-[#1A1F36]/15 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-2 md:bottom-8 md:left-8 md:right-8">
               <div className="inline-flex w-fit rounded-full bg-white/15 px-4 py-1 text-xs font-semibold tracking-[0.2em] text-white backdrop-blur">
                 EKOSISTEM

@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutSection";
+import CommunitySection from "@/components/CommunitySection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -15,6 +16,7 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        <CommunitySection />
         <StatsSection />
         <ProgramSection />
         <AboutSection />
