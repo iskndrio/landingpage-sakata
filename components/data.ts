@@ -45,21 +45,21 @@ export const testimonials = [
       "Program Sakata Academy benar-benar mengubah karir saya. Dalam 3 bulan, saya sudah bisa bekerja sebagai developer.",
     name: "Andi Pratama",
     role: "Alumni Batch 1",
-    image: "https://ui-avatars.com/api/?name=Andi+Pratama&background=E0EAFF&color=1A1F36&size=256",
+    image: "/people/andi-pratama.jpg",
   },
   {
     quote:
       "Kolaborasi dengan Sakata membuka banyak peluang bagi perusahaan kami untuk berkontribusi pada ekosistem teknologi lokal.",
     name: "Rina Kusuma",
     role: "Partnership Manager",
-    image: "https://ui-avatars.com/api/?name=Rina+Kusuma&background=E0EAFF&color=1A1F36&size=256",
+    image: "/people/rina-kusuma.jpg",
   },
   {
     quote:
       "Innovation Lab memberikan ruang yang saya butuhkan untuk mengembangkan ide menjadi produk nyata.",
     name: "Budi Santoso",
     role: "Founder StartupLokal",
-    image: "https://ui-avatars.com/api/?name=Budi+Santoso&background=E0EAFF&color=1A1F36&size=256",
+    image: "/people/budi-santoso.jpg",
   },
 ];
 
