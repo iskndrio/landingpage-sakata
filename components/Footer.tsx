@@ -13,9 +13,7 @@ export default function Footer() {
       <div className="section-container grid gap-8 md:grid-cols-[minmax(0,1fr)_auto_auto] md:items-start">
         <div>
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1A1F36] text-sm font-bold text-white">
-              S
-            </span>
+            <img src="/logo-sakata.png" alt="Sakata Innovation Center" className="h-10 w-10 rounded-full" />
             <div>
               <p className="font-semibold text-[#1A1F36]">Sakata Innovation Center</p>
               <p className="text-sm text-[#6B7280]">Inovasi untuk Indonesia</p>

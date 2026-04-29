@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { useRef } from "react";
 
 const itemVariants = {
@@ -34,7 +34,7 @@ export default function HeroSection() {
         className="sticky top-16 z-0 flex justify-center bg-white"
       >
         <div className="text-center">
-          <motion.span
+          {/* <motion.span
             initial="hidden"
             animate="visible"
             custom={0}
@@ -42,7 +42,7 @@ export default function HeroSection() {
             className="inline-flex rounded-full bg-[#EEF4FF] px-4 py-1 text-xs font-semibold tracking-[0.2em] text-[#2563EB]"
           >
             INOVASI UNTUK INDONESIA
-          </motion.span>
+          </motion.span> */}
 
           <motion.h1
             initial="hidden"
@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="relative z-30 mx-auto h-[56vh] w-full max-w-7xl overflow-hidden rounded-[2rem] border border-gray-200 bg-[#F4F6FA] shadow-[0_30px_80px_rgba(17,24,39,0.10)]"
           >
             <Image
-              src="https://picsum.photos/1600/1000?random=42"
+              src="/image.png"
               alt="Aktivitas pelatihan dan kolaborasi Sakata Innovation Center"
               fill
               priority

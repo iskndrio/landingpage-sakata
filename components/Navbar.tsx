@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -29,9 +30,13 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-4 py-3 md:px-5">
           <a href="#" className="flex items-center gap-3 text-[#1A1F36]">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1A1F36] text-sm font-bold text-white">
-              S
-            </span>
+            <Image
+              src="/logo-sakata.png"
+              alt="Sakata Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10"
+            />
             <span className="max-w-[9rem] text-sm font-bold leading-tight md:max-w-none md:text-base">
               Sakata Innovation Center
             </span>

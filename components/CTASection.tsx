@@ -27,10 +27,10 @@ export default function CTASection() {
             Bergabung Sekarang
           </a>
           <a
-            href="mailto:hello@sakatainnovation.id"
+            href="https://sakattaku.com"
             className="rounded-full border border-[#1D4ED8]/40 px-6 py-3 font-semibold text-[#1D4ED8] transition hover:bg-white/60"
           >
-            Hubungi Kami
+            Kunjungi Kami
           </a>
         </div>
       </motion.div>

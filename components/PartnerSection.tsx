@@ -8,9 +8,6 @@ export default function PartnerSection() {
   return (
     <section className="overflow-hidden py-16">
       <div className="section-container">
-        <span className="inline-flex rounded-full bg-[#EEF4FF] px-4 py-1 text-xs font-semibold tracking-[0.2em] text-[#2563EB]">
-          MITRA
-        </span>
         <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-[#1A1F36] md:text-5xl">
           Dipercaya oleh Institusi Terkemuka
         </h2>

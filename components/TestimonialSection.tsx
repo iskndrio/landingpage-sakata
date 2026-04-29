@@ -29,9 +29,6 @@ export default function TestimonialSection() {
   return (
     <section id="komunitas" className="section-container py-16 md:py-24">
       <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-white via-[#F8FAFF] to-[#EEF4FF] px-6 py-14 text-center shadow-[0_30px_80px_rgba(15,23,42,0.12)] md:px-12">
-        <span className="inline-flex rounded-full bg-[#E8F0FF] px-4 py-1 text-xs font-semibold tracking-[0.25em] text-[#1D4ED8]">
-          KOMUNITAS
-        </span>
 
         <div className="pointer-events-none absolute inset-0 hidden md:block">
           {floatingAvatars.map((avatar, index) => (

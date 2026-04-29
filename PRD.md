@@ -215,10 +215,6 @@ sakata-landing/
 - Formulir pendaftaran dengan backend (cukup redirect ke email/WhatsApp)
 - Multi-bahasa (Inggris/Indonesia) — fase 2
 
----
-
-*Dokumen ini menjadi acuan utama untuk sesi vibecoding. Setiap perubahan scope dikomunikasikan sebelum implementasi.*
-
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
