@@ -19,16 +19,19 @@ export default function TestimonialSection() {
   const active = testimonials[activeIndex];
   const leftAvatar = testimonials[(activeIndex + 1) % testimonials.length];
   const rightAvatar = testimonials[(activeIndex + 2) % testimonials.length];
+  const bottomAvatar = testimonials[(activeIndex + 3) % testimonials.length];
   const floatingAvatars = [
-    { person: active, className: "left-12 top-10 h-14 w-14" },
-    { person: leftAvatar, className: "left-6 top-1/2 h-20 w-20 -translate-y-1/2" },
-    { person: rightAvatar, className: "right-6 top-1/2 h-20 w-20 -translate-y-1/2" },
-    { person: leftAvatar, className: "right-14 bottom-10 h-14 w-14" },
+    { person: leftAvatar, className: "left-8 top-16 h-20 w-20" },
+    { person: active, className: "left-[18%] top-2 h-16 w-16" },
+    { person: rightAvatar, className: "right-10 top-10 h-20 w-20" },
+    { person: leftAvatar, className: "right-6 top-[55%] h-24 w-24 -translate-y-1/2" },
+    { person: rightAvatar, className: "left-6 top-[55%] h-24 w-24 -translate-y-1/2" },
+    { person: bottomAvatar, className: "right-[20%] bottom-10 h-[72px] w-[72px]" },
   ];
 
   return (
-    <section id="komunitas" className="section-container py-16 md:py-24">
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-white via-[#F8FAFF] to-[#EEF4FF] px-6 py-14 text-center shadow-[0_30px_80px_rgba(15,23,42,0.12)] md:px-12">
+    <section id="komunitas" className="w-full bg-white py-16 md:py-24 px-4 md:px-10">
+      <div className="relative w-full overflow-hidden px-4 py-10 text-center md:px-10 min-h-130 md:min-h-140">
 
         <div className="pointer-events-none absolute inset-0 hidden md:block">
           {floatingAvatars.map((avatar, index) => (
@@ -43,7 +46,7 @@ export default function TestimonialSection() {
                   src={avatar.person.image}
                   alt={avatar.person.name}
                   fill
-                  className="rounded-full object-cover ring-8 ring-[#F4F6FA]"
+                  className="rounded-full object-cover ring-8 ring-slate-100/80 shadow-[0_18px_40px_rgba(15,23,42,0.18)]"
                   sizes="80px"
                 />
               </div>
@@ -51,7 +54,7 @@ export default function TestimonialSection() {
           ))}
         </div>
 
-        <div className="mx-auto mt-8 max-w-4xl">
+        <div className="mx-auto mt-8 w-full max-w-4xl">
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={active.name}
@@ -59,13 +62,13 @@ export default function TestimonialSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.35 }}
-              className="text-2xl font-semibold leading-snug text-[#111827] md:text-[2.6rem] md:leading-[1.2]"
+              className="text-3xl font-semibold leading-tight text-slate-800 md:text-[3.4rem] md:leading-[1.15]"
             >
               “{active.quote}”
             </motion.blockquote>
           </AnimatePresence>
 
-          <div className="mt-8 flex flex-col items-center gap-4">
+          <div className="mt-6 flex flex-col items-center gap-3">
             <div className="flex items-center justify-center gap-3 md:hidden">
               {[active, leftAvatar, rightAvatar].map((avatar) => (
                 <div key={avatar.name} className="relative h-12 w-12">
@@ -73,15 +76,14 @@ export default function TestimonialSection() {
                     src={avatar.image}
                     alt={avatar.name}
                     fill
-                    className="rounded-full object-cover ring-4 ring-white/80 shadow-[0_8px_20px_rgba(15,23,42,0.12)]"
+                    className="rounded-full object-cover ring-4 ring-slate-100/80 shadow-md"
                     sizes="48px"
                   />
                 </div>
               ))}
             </div>
             <div>
-              <p className="text-base font-semibold text-[#1D4ED8]">{active.name}</p>
-              <p className="text-sm text-[#6B7280]">{active.role}</p>
+              <p className="text-lg font-semibold text-slate-800">- {active.name}</p>
             </div>
           </div>
         </div>

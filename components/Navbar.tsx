@@ -20,16 +20,16 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 px-4 py-4">
       <motion.div
         animate={{
-          boxShadow: isScrolled ? "0 10px 30px rgba(17, 24, 39, 0.08)" : "0 0 0 rgba(0, 0, 0, 0)",
+          boxShadow: isScrolled ? "0 10px 30px rgba(0, 0, 0, 0.05)" : "0 0 0 rgba(0, 0, 0, 0)",
         }}
         className={`section-container rounded-full border transition-all duration-300 ${
           isScrolled
-            ? "border-gray-200/80 bg-white/85 backdrop-blur-md"
-            : "border-transparent bg-white/70"
+            ? "border-blue-100 bg-white/80 backdrop-blur-md"
+            : "border-transparent bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3 md:px-5">
-          <a href="#" className="flex items-center gap-3 text-[#1A1F36]">
+          <a href="#" className="flex items-center gap-3 text-slate-900">
             <Image
               src="/logo-sakata.png"
               alt="Sakata Logo"
@@ -37,20 +37,20 @@ export default function Navbar() {
               height={40}
               className="h-10 w-10"
             />
-            <span className="max-w-[9rem] text-sm font-bold leading-tight md:max-w-none md:text-base">
+            <span className="max-w-[9rem] text-sm font-bold leading-tight md:max-w-none md:text-base text-slate-900">
               Sakata Innovation Center
             </span>
           </a>
 
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="text-sm font-medium text-gray-600 transition hover:text-[#2563EB]">
+              <a key={link.label} href={link.href} className="text-sm font-medium text-slate-600 transition hover:text-slate-900">
                 {link.label}
               </a>
             ))}
             <a
               href="#kontak"
-              className="rounded-full bg-[#1A1F36] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2563EB]"
+              className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
               Bergabung
             </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex rounded-full border border-gray-200 p-2 text-[#1A1F36] md:hidden"
+            className="inline-flex rounded-full border border-blue-100 p-2 text-slate-900 md:hidden"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -74,14 +74,14 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, height: "auto" }}
               exit={{ opacity: 0, y: -12, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden border-t border-gray-100 px-5 py-4 md:hidden"
+              className="overflow-hidden border-t border-blue-100 px-5 py-4 md:hidden bg-white/95 backdrop-blur-xl rounded-b-[2rem] mx-[-1px]"
             >
               <div className="flex flex-col gap-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-sm font-medium text-gray-700"
+                    className="text-sm font-medium text-slate-600 hover:text-slate-900"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
@@ -89,7 +89,7 @@ export default function Navbar() {
                 ))}
                 <a
                   href="#kontak"
-                  className="mt-2 rounded-full bg-[#1A1F36] px-5 py-3 text-center text-sm font-semibold text-white"
+                  className="mt-2 rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white"
                   onClick={() => setIsOpen(false)}
                 >
                   Bergabung

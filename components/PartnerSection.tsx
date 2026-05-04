@@ -6,9 +6,9 @@ export default function PartnerSection() {
   const marqueeItems = [...partners, ...partners];
 
   return (
-    <section className="overflow-hidden py-16">
+    <section className="overflow-hidden py-16 bg-[#f8fbff] border-y border-blue-100">
       <div className="section-container">
-        <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-[#1A1F36] md:text-5xl">
+        <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-slate-900 md:text-5xl text-center">
           Dipercaya oleh Institusi Terkemuka
         </h2>
       </div>
@@ -18,7 +18,7 @@ export default function PartnerSection() {
           {marqueeItems.map((partner, index) => (
             <div
               key={`${partner}-${index}`}
-              className="rounded-2xl border border-gray-200 bg-[#F4F6FA] px-6 py-4 text-sm font-semibold text-[#6B7280] grayscale transition hover:grayscale-0"
+              className="rounded-2xl border border-blue-100 bg-white px-6 py-4 text-sm font-semibold text-blue-300 grayscale transition hover:grayscale-0 hover:bg-blue-50 hover:text-slate-900"
             >
               {partner}
             </div>

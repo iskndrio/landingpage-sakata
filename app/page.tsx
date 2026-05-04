@@ -11,11 +11,11 @@ import TestimonialSection from "@/components/TestimonialSection";
 
 export default function Home() {
   return (
-    <div className="bg-white text-[#111827]">
+    <div className="bg-[#f8fbff] text-slate-900 min-h-screen">
       <Navbar />
 
       <main>
-        <div className="relative z-10 bg-white">
+        <div className="relative z-10 bg-[#f8fbff]">
           <HeroSection />
           <CommunitySection />
         </div>

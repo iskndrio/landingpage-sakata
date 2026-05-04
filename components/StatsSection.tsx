@@ -29,7 +29,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   }, [inView, target]);
 
   return (
-    <div ref={ref} className="text-4xl font-extrabold tracking-tight text-[#1A1F36] md:text-5xl">
+    <div ref={ref} className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
       {count}
       {suffix}
     </div>
@@ -38,8 +38,8 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function StatsSection() {
   return (
-    <section id="dampak" className="section-container py-8 md:py-12">
-      <div className="grid gap-4 rounded-[2rem] bg-[#F4F6FA] p-6 md:grid-cols-4 md:p-10">
+    <section id="dampak" className="section-container py-8 md:py-12 bg-[#f8fbff]">
+      <div className="grid gap-4 rounded-[2rem] bg-blue-50 border border-blue-100 p-6 md:grid-cols-4 md:p-10">
         {stats.map((item, index) => (
           <motion.div
             key={item.label}
@@ -47,10 +47,10 @@ export default function StatsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: index * 0.08 }}
-            className="rounded-2xl bg-white p-6"
+            className="rounded-2xl bg-white border border-blue-100 p-6 shadow-sm"
           >
             <Counter target={item.value} suffix={item.suffix} />
-            <p className="mt-2 text-sm font-medium text-[#6B7280]">{item.label}</p>
+            <p className="mt-2 text-sm font-medium text-slate-600">{item.label}</p>
           </motion.div>
         ))}
       </div>

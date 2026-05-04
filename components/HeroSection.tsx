@@ -5,12 +5,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 30 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay },
+    transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
@@ -21,48 +21,51 @@ export default function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.22, 0.35], [1, 1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.45], [1, 0.94]);
-  const heroY = useTransform(scrollYProgress, [0, 0.45], [0, -60]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
+  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, -80]);
 
-  const coverY = useTransform(scrollYProgress, [0, 0.2, 0.55], [160, 80, -180]);
-  const coverScale = useTransform(scrollYProgress, [0.1, 0.55], [0.98, 1]);
+  const coverY = useTransform(scrollYProgress, [0, 0.3, 0.7], [100, 50, -50]);
+  const coverScale = useTransform(scrollYProgress, [0, 0.4], [0.95, 1.05]);
+
   return (
-    <section ref={sectionRef} className="section-container relative min-h-[100vh] bg-white pt-6 pb-0 md:pt-10 md:pb-0">
+    <section ref={sectionRef} className="relative min-h-[100vh] bg-[#f8fbff] text-slate-900 pt-2 md:pt-4 pb-0 overflow-hidden">
       <motion.div
         style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
-        className="sticky top-16 z-0 flex justify-center bg-white"
+        className="sticky top-4 md:top-6 z-10 flex flex-col items-center justify-center px-4"
       >
-        <div className="text-center">
-          {/* <motion.span
+        <div className="text-center max-w-5xl mx-auto flex flex-col items-center">
+          <motion.div
             initial="hidden"
             animate="visible"
             custom={0}
             variants={itemVariants}
-            className="inline-flex rounded-full bg-[#EEF4FF] px-4 py-1 text-xs font-semibold tracking-[0.2em] text-[#2563EB]"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 py-1.5 px-4 text-sm font-medium text-blue-700 backdrop-blur-md"
           >
-            INOVASI UNTUK INDONESIA
-          </motion.span> */}
+            <span>Pusat Inovasi Teknologi</span>
+          </motion.div>
 
           <motion.h1
             initial="hidden"
             animate="visible"
             custom={0.1}
             variants={itemVariants}
-            className="mx-auto mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-[#1A1F36] md:text-7xl"
+            className="font-display text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl lg:text-[6rem] mb-6 text-slate-900"
           >
-            Mendorong Inovasi Teknologi untuk Indonesia yang{" "}
-            <span className="text-[#2563EB]">Lebih Baik.</span>
+            Mendorong Inovasi <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">
+              untuk Indonesia.
+            </span>
           </motion.h1>
+
           <motion.p
             initial="hidden"
             animate="visible"
             custom={0.2}
             variants={itemVariants}
-            className="mt-6 mx-auto max-w-2xl text-base leading-8 text-[#6B7280] md:text-lg"
+            className="mt-4 mx-auto max-w-2xl text-lg md:text-xl text-slate-600 font-light"
           >
-            Sakata Innovation Center hadir untuk membangun ekosistem teknologi yang inklusif, berdampak, dan
-            berkelanjutan bagi seluruh Indonesia.
+            Sakata Innovation Center hadir untuk membangun ekosistem teknologi yang inklusif, berdampak, dan berkelanjutan bagi seluruh pejuang inovasi.
           </motion.p>
 
           <motion.div
@@ -70,17 +73,17 @@ export default function HeroSection() {
             animate="visible"
             custom={0.3}
             variants={itemVariants}
-            className="mt-10 flex flex-wrap justify-center gap-4"
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
           >
             <a
               href="#program"
-              className="inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-6 py-3 font-semibold text-white transition hover:bg-[#1D4ED8]"
+              className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-transform hover:scale-105 hover:bg-blue-700"
             >
-              Lihat Program <ArrowRight className="h-4 w-4" />
+              Lihat Program <ArrowRight className="h-5 w-5" />
             </a>
             <a
               href="#tentang"
-              className="rounded-full border border-[#D1D5DB] px-6 py-3 font-semibold text-[#1A1F36] transition hover:border-[#2563EB] hover:text-[#2563EB]"
+              className="flex items-center justify-center gap-2 rounded-full border border-blue-200 bg-white/60 px-8 py-4 text-base font-semibold text-slate-900 transition-all hover:bg-blue-50"
             >
               Tentang Kami
             </a>
@@ -88,30 +91,22 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      <div className="mt-4 md:mt-6 bg-white">
-        <div className="sticky top-24 bg-white">
-          <motion.div
-            style={{ y: coverY, scale: coverScale, opacity: 1 }}
-            className="relative z-30 mx-auto h-[56vh] w-full max-w-7xl overflow-hidden rounded-[2rem] border border-gray-200 bg-[#F4F6FA] shadow-[0_30px_80px_rgba(17,24,39,0.10)]"
-          >
+      <div className="relative mt-8 md:mt-12 w-full z-20 pointer-events-none">
+        <motion.div
+          style={{ y: coverY, scale: coverScale }}
+          className="mx-auto w-full max-w-[900px] px-4 md:px-8"
+        >
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[2rem] border border-blue-100 shadow-[0_24px_60px_rgba(37,99,235,0.18)] bg-blue-50 backdrop-blur-sm">
             <Image
               src="/image.png"
-              alt="Aktivitas pelatihan dan kolaborasi Sakata Innovation Center"
+              alt="Dashboard Sakata Innovation Center"
               fill
               priority
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 1200px"
+              sizes="(max-width: 768px) 100vw, 900px"
             />
-            <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-2 md:bottom-8 md:left-8 md:right-8">
-              <div className="inline-flex w-fit rounded-full bg-[#111827] px-4 py-1 text-xs font-semibold tracking-[0.2em] text-white">
-                EKOSISTEM
-              </div>
-              <p className="max-w-2xl font-display text-2xl font-bold leading-tight text-white md:text-3xl">
-                Ruang bertemu talenta, mentor, dan institusi untuk menghasilkan inovasi yang bisa diuji di dunia nyata.
-              </p>
-            </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
