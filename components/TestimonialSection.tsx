@@ -30,8 +30,8 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section id="komunitas" className="w-full bg-white py-16 md:py-24 px-4 md:px-10">
-      <div className="relative w-full overflow-hidden px-4 py-10 text-center md:px-10 min-h-130 md:min-h-140">
+    <section id="komunitas" className="w-full bg-white py-14 md:py-24 px-4 md:px-10">
+      <div className="relative w-full overflow-hidden px-4 py-8 text-center md:px-10 min-h-[26rem] md:min-h-[34rem]">
 
         <div className="pointer-events-none absolute inset-0 hidden md:block">
           {floatingAvatars.map((avatar, index) => (
@@ -62,7 +62,7 @@ export default function TestimonialSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.35 }}
-              className="text-3xl font-semibold leading-tight text-slate-800 md:text-[3.4rem] md:leading-[1.15]"
+              className="text-2xl font-semibold leading-tight text-slate-800 sm:text-3xl md:text-[3.4rem] md:leading-[1.15]"
             >
               “{active.quote}”
             </motion.blockquote>

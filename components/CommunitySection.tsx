@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CommunitySection() {
   return (
-    <section id="komunitas" className="section-container relative z-20 bg-[#f8fbff] pt-4 pb-16 md:pt-6 md:pb-24">
+    <section id="komunitas" className="section-container relative z-20 bg-[#f8fbff] pt-4 pb-14 md:pt-6 md:pb-24">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -47,7 +47,7 @@ export default function CommunitySection() {
           transition={{ duration: 0.5, delay: 0.05 }}
         >
           
-          <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+          <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             Memadukan Keuangan dengan Konektivitas Sosial
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 md:text-lg">

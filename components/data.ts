@@ -68,9 +68,15 @@ export const testimonials = [
 ];
 
 export const partners = [
-  "Ventio Production",
-  "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
-  "Universitas Siliwangi",
-  "Universitas Informatika Dan Bisnis Indonesia ",
-  "Pemertintah Kota Tasikmalaya",
+  { name: "Kemendikbudristek", logo: "/logo/kemendikbud.png" },
+  { name: "Universitas Siliwangi", logo: "/logo/unsil.png" },
+  { name: "UNIBI", logo: "/logo/unibi.png" },
+  { name: "Kota Tasikmalaya", logo: "/logo/kota-tasik.jpg" },
+  { name: "Kota Banjar", logo: "/logo/kota-banjar.png" },
+  { name: "Kabupaten Tasikmalaya", logo: "/logo/kab-tasik.jpg" },
+  { name: "Kabupaten Garut", logo: "/logo/kab-garut.png" },
+  { name: "Kabupaten Ciamis", logo: "/logo/kab-ciamis.jpg" },
+  { name: "Cipasung", logo: "/logo/cipasung.png" },
+  { name: "Fadnov", logo: "/logo/fadnov.jpg" },
+  { name: "Aljamal", logo: "/logo/aljamal.jpg" },
 ];
